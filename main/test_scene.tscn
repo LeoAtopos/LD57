@@ -1,3 +1,85 @@
-[gd_scene format=3 uid="uid://b015a2i3ws7ql"]
+[gd_scene load_steps=8 format=3 uid="uid://b015a2i3ws7ql"]
 
-[node name="TestScene" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://c7q785e654r5k" path="res://main/LoveDrawing1.png" id="1_r1fut"]
+[ext_resource type="Script" path="res://main/test_scene.gd" id="1_wfom0"]
+[ext_resource type="Texture2D" uid="uid://cmeyom3de3gy4" path="res://main/LoveDrawing2.png" id="2_gyhke"]
+[ext_resource type="Texture2D" uid="uid://b0pysdofnco8w" path="res://main/LoveDrawing3.png" id="3_pn36k"]
+[ext_resource type="Texture2D" uid="uid://b6qcn7ynaakxv" path="res://main/LoveDrawing4.png" id="4_4wana"]
+[ext_resource type="Texture2D" uid="uid://edqeedud7agh" path="res://main/LoveDrawing5.png" id="5_a4rqm"]
+[ext_resource type="Script" path="res://main/layer_control.gd" id="7_7v7qi"]
+
+[node name="TestScene" type="Node2D" node_paths=PackedStringArray("pic_tree", "layer_tree", "ui")]
+script = ExtResource("1_wfom0")
+pic_tree = NodePath("PicLayers")
+layer_tree = NodePath("UI/MarginContainer/Layers")
+ui = NodePath("UI")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PicLayers" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("1_r1fut")
+
+[node name="2" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("2_gyhke")
+
+[node name="3" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("3_pn36k")
+
+[node name="4" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("4_4wana")
+
+[node name="5" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("5_a4rqm")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -246.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Layers" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="5" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="4" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="3" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="2" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="1" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[connection signal="gui_input" from="UI/MarginContainer/Layers/5" to="UI/MarginContainer/Layers/5" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/4" to="UI/MarginContainer/Layers/4" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/3" to="UI/MarginContainer/Layers/3" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/2" to="UI/MarginContainer/Layers/2" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/1" to="UI/MarginContainer/Layers/1" method="_on_gui_input"]
