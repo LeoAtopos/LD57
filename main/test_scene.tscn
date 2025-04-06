@@ -27,7 +27,8 @@ ui = NodePath("UI")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="PicLayers" type="Node2D" parent="."]
-position = Vector2(-51, 0)
+position = Vector2(-74, 0)
+scale = Vector2(2, 2)
 
 [node name="1" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("2_h4yp4")

@@ -68,12 +68,13 @@ func _ready() -> void:
 		
 	layer_array = layer_tree.get_children()
 	
-	# Generate random text for each label
+	# Set label text to matching pic's texture resource name
 	for label in layer_array:
-		var random_text = ""
-		for i in randi_range(5, 10): # 5-10 random characters
-			random_text += char(randi_range(33, 126)) # Printable ASCII chars
-		label.text = random_text
+		for pic in pics_array:
+			if pic.name == label.name:
+				if pic is Sprite2D and pic.texture != null:
+					label.text = pic.texture.resource_path.get_file()
+				break
 	
 	# Ensure all parents ignore mouse events
 	var parent = layer_tree
