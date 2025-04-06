@@ -39,6 +39,12 @@ directories/dtl_directory={
 "what line": "res://tests/what line.dtl"
 }
 
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
@@ -58,3 +64,5 @@ dialogic_default_action={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

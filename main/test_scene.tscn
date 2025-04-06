@@ -1,12 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://b015a2i3ws7ql"]
+[gd_scene load_steps=18 format=3 uid="uid://b015a2i3ws7ql"]
 
-[ext_resource type="Texture2D" uid="uid://c7q785e654r5k" path="res://main/LoveDrawing1.png" id="1_r1fut"]
 [ext_resource type="Script" path="res://main/test_scene.gd" id="1_wfom0"]
-[ext_resource type="Texture2D" uid="uid://cmeyom3de3gy4" path="res://main/LoveDrawing2.png" id="2_gyhke"]
-[ext_resource type="Texture2D" uid="uid://b0pysdofnco8w" path="res://main/LoveDrawing3.png" id="3_pn36k"]
-[ext_resource type="Texture2D" uid="uid://b6qcn7ynaakxv" path="res://main/LoveDrawing4.png" id="4_4wana"]
-[ext_resource type="Texture2D" uid="uid://edqeedud7agh" path="res://main/LoveDrawing5.png" id="5_a4rqm"]
+[ext_resource type="Texture2D" uid="uid://bkc33alq0pk0r" path="res://images/pics/1blusky.png" id="2_h4yp4"]
+[ext_resource type="Texture2D" uid="uid://bgp23pul7wuid" path="res://images/pics/2bankgrass.png" id="3_7wh8m"]
+[ext_resource type="Texture2D" uid="uid://btjurwbuuy1m8" path="res://images/pics/3clouds.png" id="4_kx44s"]
+[ext_resource type="Texture2D" uid="uid://b07osfin2rt1p" path="res://images/pics/4fartower.png" id="5_juxxr"]
+[ext_resource type="Texture2D" uid="uid://mai7qq30uqnc" path="res://images/pics/5mountain.png" id="6_67bsw"]
 [ext_resource type="Script" path="res://main/layer_control.gd" id="7_7v7qi"]
+[ext_resource type="Texture2D" uid="uid://dwgs6nswodga1" path="res://images/pics/6river.png" id="7_dl3qk"]
+[ext_resource type="Texture2D" uid="uid://c6cifamrdog3p" path="res://images/pics/7bridge.png" id="8_7sgl6"]
+[ext_resource type="Texture2D" uid="uid://dexac2bpe0l2i" path="res://images/pics/8factory.png" id="9_142sb"]
+[ext_resource type="Texture2D" uid="uid://be1vj1t50gc5a" path="res://images/pics/9trees.png" id="10_i8a80"]
+[ext_resource type="Texture2D" uid="uid://m4ia7jjje50n" path="res://images/pics/10disk1.png" id="11_nyygn"]
+[ext_resource type="Texture2D" uid="uid://datqjsp4efe47" path="res://images/pics/11disk.png" id="12_uy4op"]
+[ext_resource type="Texture2D" uid="uid://dfwb2iaag2n4y" path="res://images/pics/12cat.png" id="13_gxqow"]
+[ext_resource type="Texture2D" uid="uid://bwehx5wsv4cod" path="res://images/pics/13disk2.png" id="14_rh32x"]
+[ext_resource type="Texture2D" uid="uid://cdtnhl47skjvp" path="res://images/pics/14disk3.png" id="15_b05qc"]
+[ext_resource type="Texture2D" uid="uid://nyrk1bld7qsm" path="res://images/pics/15logo.png" id="16_x4lrx"]
 
 [node name="TestScene" type="Node2D" node_paths=PackedStringArray("pic_tree", "layer_tree", "ui")]
 script = ExtResource("1_wfom0")
@@ -15,23 +25,55 @@ layer_tree = NodePath("UI/MarginContainer/Layers")
 ui = NodePath("UI")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="PicLayers" type="Node2D" parent="."]
+position = Vector2(-51, 0)
 
 [node name="1" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("1_r1fut")
+texture = ExtResource("2_h4yp4")
 
 [node name="2" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("2_gyhke")
+texture = ExtResource("3_7wh8m")
 
 [node name="3" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("3_pn36k")
+texture = ExtResource("4_kx44s")
 
 [node name="4" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("4_4wana")
+texture = ExtResource("5_juxxr")
 
 [node name="5" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("5_a4rqm")
+texture = ExtResource("6_67bsw")
+
+[node name="6" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("7_dl3qk")
+
+[node name="7" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("8_7sgl6")
+
+[node name="8" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("9_142sb")
+
+[node name="9" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("10_i8a80")
+
+[node name="10" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("11_nyygn")
+
+[node name="11" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("12_uy4op")
+
+[node name="12" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("13_gxqow")
+
+[node name="13" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("14_rh32x")
+
+[node name="14" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("15_b05qc")
+
+[node name="15" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("16_x4lrx")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -40,7 +82,7 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -246.0
+offset_left = -171.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -49,6 +91,66 @@ layout_mode = 2
 alignment = 1
 
 [node name="5" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="6" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="7" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="8" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="9" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="10" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="11" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="12" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="13" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="14" type="Label" parent="UI/MarginContainer/Layers"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("7_7v7qi")
+
+[node name="15" type="Label" parent="UI/MarginContainer/Layers"]
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -79,6 +181,16 @@ mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
 [connection signal="gui_input" from="UI/MarginContainer/Layers/5" to="UI/MarginContainer/Layers/5" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/6" to="UI/MarginContainer/Layers/6" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/7" to="UI/MarginContainer/Layers/7" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/8" to="UI/MarginContainer/Layers/8" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/9" to="UI/MarginContainer/Layers/9" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/10" to="UI/MarginContainer/Layers/10" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/11" to="UI/MarginContainer/Layers/11" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/12" to="UI/MarginContainer/Layers/12" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/13" to="UI/MarginContainer/Layers/13" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/14" to="UI/MarginContainer/Layers/14" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/Layers/15" to="UI/MarginContainer/Layers/15" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/Layers/4" to="UI/MarginContainer/Layers/4" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/Layers/3" to="UI/MarginContainer/Layers/3" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/Layers/2" to="UI/MarginContainer/Layers/2" method="_on_gui_input"]

@@ -11,23 +11,13 @@ var dragged_label_parent = null
 var dragged_label_index = -1
 
 func _on_label_drag_started(label):
-	print("Drag START signal received for: ", label.name)
-	print("Original parent: ", label.get_parent())
 	dragged_label_parent = label.get_parent()
 	dragged_label_index = label.get_index()
 	dragged_label_parent.remove_child(label)
-	print("After remove_child, parent is: ", label.get_parent())
 	ui.add_child(label)
-	print("After add to ui, parent is: ", label.get_parent())
-	print("UI children count: ", ui.get_child_count())
 	label.z_index = 10 # Ensure it appears above other elements
 
 func _on_label_drag_ended(label):
-	print("\n--- DROP PROCESSING START ---")
-	print("Label dropped: ", label.name)
-	print("Global position: ", label.global_position)
-	print("Current parent: ", label.get_parent())
-	
 	# Remove from current parent (ui layer)
 	if label.is_inside_tree() and label.get_parent() == ui:
 		ui.remove_child(label)
@@ -40,7 +30,6 @@ func _on_label_drag_ended(label):
 	var insert_index = 0
 	for i in range(layer_tree.get_child_count()):
 		var child = layer_tree.get_child(i)
-		print("- Comparing with child ", i, " at Y: ", child.global_position.y)
 		if drop_pos < child.global_position.y:
 			insert_index = i
 			break
@@ -49,15 +38,9 @@ func _on_label_drag_ended(label):
 	
 	# Ensure valid index
 	insert_index = clamp(insert_index, 0, layer_tree.get_child_count() - 1)
-	print("Final insert index: ", insert_index)
 	
 	# Reorder child
 	layer_tree.move_child(label, insert_index)
-	
-	print("New parent: ", label.get_parent())
-	print("New sibling order:")
-	for i in range(layer_tree.get_child_count()):
-		print(i, ": ", layer_tree.get_child(i).name)
 	
 	# Reorder pic_tree to maintain reverse of layer order
 	var new_pic_order = []
@@ -73,11 +56,8 @@ func _on_label_drag_ended(label):
 	if new_pic_order.size() == pics_array.size():
 		for i in new_pic_order.size():
 			pic_tree.move_child(new_pic_order[i], i)
-		print("Reordered pic_tree to maintain reverse of layer_tree")
 	else:
-		print("Warning: Could not match all pics to labels")
-	
-	print("--- DROP PROCESSING END ---\n")
+		pass
 
 func _ready() -> void:
 	randomize()
@@ -99,7 +79,6 @@ func _ready() -> void:
 	var parent = layer_tree
 	while parent:
 		if parent.has_method("set_mouse_filter"):
-			print("Setting mouse_filter for ", parent.name, " to IGNORE")
 			parent.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		parent = parent.get_parent()
 	
