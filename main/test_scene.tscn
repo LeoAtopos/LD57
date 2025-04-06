@@ -21,11 +21,10 @@
 [node name="TestScene" type="Node2D" node_paths=PackedStringArray("pic_tree", "layer_tree", "ui")]
 script = ExtResource("1_wfom0")
 pic_tree = NodePath("PicLayers")
-layer_tree = NodePath("UI/MarginContainer/Layers")
+layer_tree = NodePath("UI/MarginContainer/VBoxContainer/HBoxContainer/Layers")
 ui = NodePath("UI")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
 
 [node name="PicLayers" type="Node2D" parent="."]
 position = Vector2(-51, 0)
@@ -82,116 +81,280 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -171.0
+offset_left = -323.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_bottom = 20
 
-[node name="Layers" type="VBoxContainer" parent="UI/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 alignment = 1
 
-[node name="5" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+text = "DEPTHS"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "LAYERS
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "1"
+text_direction = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "2"
+text_direction = 2
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "3"
+text_direction = 2
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "4"
+text_direction = 2
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "5"
+text_direction = 2
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "6"
+text_direction = 2
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "7"
+text_direction = 2
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "8"
+text_direction = 2
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "9"
+text_direction = 2
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "10"
+text_direction = 2
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "11"
+text_direction = 2
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "12"
+text_direction = 2
+
+[node name="RichTextLabel13" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "13"
+text_direction = 2
+
+[node name="RichTextLabel14" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "14"
+text_direction = 2
+
+[node name="RichTextLabel15" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "15"
+text_direction = 2
+
+[node name="Layers" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="5" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+text = "sdfsadfas"
+script = ExtResource("7_7v7qi")
+
+[node name="6" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="6" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="7" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="7" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="8" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="8" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="9" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="9" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="10" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="10" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="11" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="11" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="12" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="12" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="13" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="13" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="14" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="14" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="15" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="15" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="4" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="4" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="3" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="3" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="2" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="2" type="Label" parent="UI/MarginContainer/Layers"]
+[node name="1" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="1" type="Label" parent="UI/MarginContainer/Layers"]
-layout_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-script = ExtResource("7_7v7qi")
-
-[connection signal="gui_input" from="UI/MarginContainer/Layers/5" to="UI/MarginContainer/Layers/5" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/6" to="UI/MarginContainer/Layers/6" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/7" to="UI/MarginContainer/Layers/7" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/8" to="UI/MarginContainer/Layers/8" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/9" to="UI/MarginContainer/Layers/9" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/10" to="UI/MarginContainer/Layers/10" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/11" to="UI/MarginContainer/Layers/11" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/12" to="UI/MarginContainer/Layers/12" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/13" to="UI/MarginContainer/Layers/13" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/14" to="UI/MarginContainer/Layers/14" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/15" to="UI/MarginContainer/Layers/15" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/4" to="UI/MarginContainer/Layers/4" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/3" to="UI/MarginContainer/Layers/3" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/2" to="UI/MarginContainer/Layers/2" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/Layers/1" to="UI/MarginContainer/Layers/1" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/5" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/5" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/6" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/6" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/7" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/7" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/8" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/8" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/9" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/9" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/10" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/10" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/11" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/11" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/12" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/12" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/13" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/13" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/14" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/14" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/15" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/15" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/4" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/4" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/3" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/3" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/2" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/2" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/1" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/1" method="_on_gui_input"]
