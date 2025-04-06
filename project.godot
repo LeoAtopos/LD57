@@ -42,6 +42,11 @@ directories/dtl_directory={
 "begine_line_2": "res://dialogs/begine_line_2.dtl",
 "easy_give_up_line": "res://dialogs/easy_give_up_line.dtl",
 "ending0": "res://dialogs/ending0.dtl",
+"ending0_line": "res://dialogs/ending0_line.dtl",
+"ending1_line": "res://dialogs/ending1_line.dtl",
+"ending2_line": "res://dialogs/ending2_line.dtl",
+"ending3_line": "res://dialogs/ending3_line.dtl",
+"ending4_line": "res://dialogs/ending4_line.dtl",
 "entry_line": "res://dialogs/entry_line.dtl",
 "saw_help_line": "res://dialogs/saw_help_line.dtl"
 }

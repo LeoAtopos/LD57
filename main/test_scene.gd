@@ -88,17 +88,17 @@ func _on_label_drag_ended(label):
 		if check_if_order_good(order_dic):
 			print("order good!!!!!")
 			done_button.show()
-			if drop_time == 4 or drop_time == 14:
-				Dialogic.start("easy_give_up_line")
 		else:
 			done_button.hide()
+			if drop_time == 4 or drop_time == 14:
+				Dialogic.start("easy_give_up_line")
 	
 	if check_show_help(order_dic):
 		print("help!!!!")
 		see_button.show()
 	else:
 		print(".....")
-		see_button.show()
+		see_button.hide()
 	if playing_stage == 2:
 		done_button.show()
 		
@@ -188,19 +188,27 @@ func _handle_dialog_done(massage):
 		pic_tree.position = Vector2(-74, 0)
 		ui.show()
 		Dialogic.start("begine_line_2")
+	if massage == "no play":
+		await get_tree().create_timer(0.2).timeout
+		get_tree().change_scene_to_file("res://main/ending0.tscn")
 	if massage == "go play":
 		state_chart.send_event("play")
 	if massage == "submit":
+		await get_tree().create_timer(0.2).timeout
 		get_tree().change_scene_to_file("res://main/ending1.tscn")
 	if massage == "go on":
 		state_chart.send_event("play2")
 	if massage == "want give up":
+		await get_tree().create_timer(0.2).timeout
 		get_tree().change_scene_to_file("res://main/ending1.tscn")
 	if massage == "mail ask":
+		await get_tree().create_timer(0.2).timeout
 		get_tree().change_scene_to_file("res://main/ending2.tscn")
 	if massage == "report up":
+		await get_tree().create_timer(0.2).timeout
 		get_tree().change_scene_to_file("res://main/ending3.tscn")
 	if massage == "call 911":
+		await get_tree().create_timer(0.2).timeout
 		get_tree().change_scene_to_file("res://main/ending4.tscn")
 
 

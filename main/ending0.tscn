@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj80hfygc4w4r"]
+
+[ext_resource type="Texture2D" uid="uid://c8jdqopxw7o3e" path="res://images/scene_pics/the desk.png" id="1_luwy4"]
+[ext_resource type="Script" path="res://main/ending_0.gd" id="1_y8wr0"]
+
+[node name="Ending0" type="Node2D"]
+script = ExtResource("1_y8wr0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_luwy4")
+expand_mode = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b015a2i3ws7ql"]
+[gd_scene load_steps=23 format=3 uid="uid://b015a2i3ws7ql"]
 
 [ext_resource type="Script" path="res://main/test_scene.gd" id="1_wfom0"]
 [ext_resource type="Texture2D" uid="uid://bkc33alq0pk0r" path="res://images/pics/blue sky.png" id="2_h4yp4"]
@@ -14,8 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dsn7jl7ojy31a" path="res://images/pics/ufo behind cat.png" id="11_tdxjp"]
 [ext_resource type="Texture2D" uid="uid://dfwb2iaag2n4y" path="res://images/pics/cat.png" id="13_gxqow"]
 [ext_resource type="Texture2D" uid="uid://dttr6u4iexsct" path="res://images/pics/ufo far.png" id="13_tk7yd"]
+[ext_resource type="Script" path="res://main/button_2.gd" id="16_801js"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="16_vbcux"]
 [ext_resource type="Texture2D" uid="uid://nyrk1bld7qsm" path="res://images/pics/logo.png" id="16_x4lrx"]
+[ext_resource type="Script" path="res://main/panel_2.gd" id="17_1vk12"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="17_muyr4"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="18_3om0s"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="19_471ri"]
@@ -39,44 +41,44 @@ clip_panel = NodePath("UI/ClipPanels")
 position = Vector2(-74, 0)
 scale = Vector2(2, 2)
 
-[node name="2" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("3_7wh8m")
-
 [node name="1" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("2_h4yp4")
-
-[node name="3" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("4_kx44s")
-
-[node name="4" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("5_juxxr")
-
-[node name="5" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("7_dl3qk")
-
-[node name="6" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("8_7sgl6")
-
-[node name="7" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("6_67bsw")
-
-[node name="8" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("9_142sb")
-
-[node name="9" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("10_i8a80")
 
 [node name="10" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("11_tdxjp")
 
+[node name="8" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("9_142sb")
+
+[node name="2" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("3_7wh8m")
+
 [node name="11" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("13_gxqow")
+
+[node name="3" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("4_kx44s")
+
+[node name="5" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("7_dl3qk")
 
 [node name="12" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("13_tk7yd")
 
+[node name="9" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("10_i8a80")
+
+[node name="7" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("6_67bsw")
+
+[node name="4" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("5_juxxr")
+
 [node name="13" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("16_x4lrx")
+
+[node name="6" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("8_7sgl6")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -327,9 +329,12 @@ text = "DONE"
 [node name="Button2" type="Button" parent="UI"]
 offset_left = 537.0
 offset_top = 410.0
-offset_right = 618.0
-offset_bottom = 441.0
+offset_right = 651.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
 text = "Is That...?"
+script = ExtResource("16_801js")
 
 [node name="ClipPanels" type="Control" parent="UI"]
 layout_mode = 3
@@ -357,6 +362,7 @@ offset_top = 312.0
 offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("17_1vk12")
 
 [node name="StateChart" type="Node" parent="."]
 script = ExtResource("16_vbcux")
@@ -396,6 +402,7 @@ event = &"saw help"
 delay_in_seconds = "0.0"
 
 [node name="cva" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(482, 269)
 scale = Vector2(2, 2)
 texture = ExtResource("20_nbyt1")

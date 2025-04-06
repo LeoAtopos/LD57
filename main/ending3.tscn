@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://c2bsfqogo4o0b"]
+[gd_scene load_steps=4 format=3 uid="uid://c2bsfqogo4o0b"]
 
-[node name="Ending1" type="Node2D"]
+[ext_resource type="Script" path="res://main/ending_3.gd" id="1_61ayn"]
+[ext_resource type="Texture2D" uid="uid://c8jdqopxw7o3e" path="res://images/scene_pics/the desk.png" id="2_niwfa"]
+[ext_resource type="Texture2D" uid="uid://nd7wo0vyownn" path="res://images/scene_pics/office.png" id="3_ysl4v"]
+
+[node name="Ending3" type="Node2D" node_paths=PackedStringArray("back_pic1", "back_pic2")]
+script = ExtResource("1_61ayn")
+back_pic1 = NodePath("CanvasLayer/TextureRect")
+back_pic2 = NodePath("CanvasLayer/TextureRect2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_niwfa")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ysl4v")
+expand_mode = 2

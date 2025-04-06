@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://duj7bqos8sxpx"]
+[gd_scene load_steps=5 format=3 uid="uid://duj7bqos8sxpx"]
 
-[node name="Ending1" type="Node2D"]
+[ext_resource type="Script" path="res://main/ending_4.gd" id="1_lfyig"]
+[ext_resource type="Texture2D" uid="uid://c8jdqopxw7o3e" path="res://images/scene_pics/the desk.png" id="1_ysqul"]
+[ext_resource type="Texture2D" uid="uid://74hugssrucn8" path="res://images/scene_pics/police.png" id="3_2g2sf"]
+[ext_resource type="Texture2D" uid="uid://cwioxqrvutki1" path="res://images/scene_pics/desk smile.png" id="4_jyo3w"]
+
+[node name="Ending4" type="Node2D" node_paths=PackedStringArray("back_pic1", "back_pic2", "back_pic3")]
+script = ExtResource("1_lfyig")
+back_pic1 = NodePath("CanvasLayer/TextureRect")
+back_pic2 = NodePath("CanvasLayer/TextureRect2")
+back_pic3 = NodePath("CanvasLayer/TextureRect3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ysqul")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2g2sf")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jyo3w")
+expand_mode = 2

@@ -18,6 +18,7 @@ func _on_monolog_state_entered() -> void:
 	Dialogic.connect("signal_event", _on_dialogic_signal)
 
 func _on_dialogic_signal(massage:String):
+	await get_tree().create_timer(0.2).timeout
 	get_tree().change_scene_to_file("res://main/test_scene.tscn")
 
 
