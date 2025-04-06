@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkc33alq0pk0r"
-path="res://.godot/imported/1blusky.png-fcab4193414c7e78bca33eebe16ccccc.ctex"
+path="res://.godot/imported/blue sky.png-65dd2df89349a3a7124c195c86004465.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/1blusky.png"
-dest_files=["res://.godot/imported/1blusky.png-fcab4193414c7e78bca33eebe16ccccc.ctex"]
+source_file="res://images/pics/blue sky.png"
+dest_files=["res://.godot/imported/blue sky.png-65dd2df89349a3a7124c195c86004465.ctex"]
 
 [params]
 

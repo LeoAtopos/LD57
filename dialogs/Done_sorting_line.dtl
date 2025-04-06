@@ -1,0 +1,10 @@
+yes
+\done le
+- submit
+	[signal arg="submit"]
+	[end_timeline]
+- wait
+thinking
+thinking...
+[signal arg="go on"]
+[end_timeline]

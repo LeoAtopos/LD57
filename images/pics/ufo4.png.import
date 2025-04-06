@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dexac2bpe0l2i"
-path="res://.godot/imported/8factory.png-27816ddc53cd5725b163f1f19f3154fb.ctex"
+uid="uid://cdtnhl47skjvp"
+path="res://.godot/imported/ufo4.png-f4f588aa4a7eaf61d3fef63ffea1bc69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/8factory.png"
-dest_files=["res://.godot/imported/8factory.png-27816ddc53cd5725b163f1f19f3154fb.ctex"]
+source_file="res://images/pics/ufo4.png"
+dest_files=["res://.godot/imported/ufo4.png-f4f588aa4a7eaf61d3fef63ffea1bc69.ctex"]
 
 [params]
 

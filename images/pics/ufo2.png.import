@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgp23pul7wuid"
-path="res://.godot/imported/2bankgrass.png-996607d8f5eb60b0295fccaf2932be3f.ctex"
+uid="uid://datqjsp4efe47"
+path="res://.godot/imported/ufo2.png-0a3a061fef9b80377081bb1c8b28031a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/2bankgrass.png"
-dest_files=["res://.godot/imported/2bankgrass.png-996607d8f5eb60b0295fccaf2932be3f.ctex"]
+source_file="res://images/pics/ufo2.png"
+dest_files=["res://.godot/imported/ufo2.png-0a3a061fef9b80377081bb1c8b28031a.ctex"]
 
 [params]
 

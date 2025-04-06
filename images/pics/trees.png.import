@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgs6nswodga1"
-path="res://.godot/imported/6river.png-5653a4c02d06d5e71eef5d2667f907b8.ctex"
+uid="uid://be1vj1t50gc5a"
+path="res://.godot/imported/trees.png-5f5e50eec5102e90d1302deb0dd7d364.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/6river.png"
-dest_files=["res://.godot/imported/6river.png-5653a4c02d06d5e71eef5d2667f907b8.ctex"]
+source_file="res://images/pics/trees.png"
+dest_files=["res://.godot/imported/trees.png-5f5e50eec5102e90d1302deb0dd7d364.ctex"]
 
 [params]
 

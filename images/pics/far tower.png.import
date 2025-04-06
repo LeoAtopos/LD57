@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwehx5wsv4cod"
-path="res://.godot/imported/13disk2.png-6347358ef1c04056f1d1991f33f9e5e3.ctex"
+uid="uid://b07osfin2rt1p"
+path="res://.godot/imported/far tower.png-0cdcf7e78ab4b2e6992f2f118a2dccc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/13disk2.png"
-dest_files=["res://.godot/imported/13disk2.png-6347358ef1c04056f1d1991f33f9e5e3.ctex"]
+source_file="res://images/pics/far tower.png"
+dest_files=["res://.godot/imported/far tower.png-0cdcf7e78ab4b2e6992f2f118a2dccc9.ctex"]
 
 [params]
 

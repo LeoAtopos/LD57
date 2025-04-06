@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b07osfin2rt1p"
-path="res://.godot/imported/4fartower.png-a1cae27568ea5b3016409acd7d0f7073.ctex"
+uid="uid://c6cifamrdog3p"
+path="res://.godot/imported/bridge.png-b6eb56dd8dae732409e3075469d9910c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/4fartower.png"
-dest_files=["res://.godot/imported/4fartower.png-a1cae27568ea5b3016409acd7d0f7073.ctex"]
+source_file="res://images/pics/bridge.png"
+dest_files=["res://.godot/imported/bridge.png-b6eb56dd8dae732409e3075469d9910c.ctex"]
 
 [params]
 

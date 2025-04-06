@@ -1,28 +1,37 @@
-[gd_scene load_steps=18 format=3 uid="uid://b015a2i3ws7ql"]
+[gd_scene load_steps=21 format=3 uid="uid://b015a2i3ws7ql"]
 
 [ext_resource type="Script" path="res://main/test_scene.gd" id="1_wfom0"]
-[ext_resource type="Texture2D" uid="uid://bkc33alq0pk0r" path="res://images/pics/1blusky.png" id="2_h4yp4"]
-[ext_resource type="Texture2D" uid="uid://bgp23pul7wuid" path="res://images/pics/2bankgrass.png" id="3_7wh8m"]
-[ext_resource type="Texture2D" uid="uid://btjurwbuuy1m8" path="res://images/pics/3clouds.png" id="4_kx44s"]
-[ext_resource type="Texture2D" uid="uid://b07osfin2rt1p" path="res://images/pics/4fartower.png" id="5_juxxr"]
-[ext_resource type="Texture2D" uid="uid://mai7qq30uqnc" path="res://images/pics/5mountain.png" id="6_67bsw"]
+[ext_resource type="Texture2D" uid="uid://bkc33alq0pk0r" path="res://images/pics/blue sky.png" id="2_h4yp4"]
+[ext_resource type="Texture2D" uid="uid://bgp23pul7wuid" path="res://images/pics/bank grass.png" id="3_7wh8m"]
+[ext_resource type="Texture2D" uid="uid://btjurwbuuy1m8" path="res://images/pics/clouds.png" id="4_kx44s"]
+[ext_resource type="Texture2D" uid="uid://b07osfin2rt1p" path="res://images/pics/far tower.png" id="5_juxxr"]
+[ext_resource type="Texture2D" uid="uid://mai7qq30uqnc" path="res://images/pics/mountain.png" id="6_67bsw"]
 [ext_resource type="Script" path="res://main/layer_control.gd" id="7_7v7qi"]
-[ext_resource type="Texture2D" uid="uid://dwgs6nswodga1" path="res://images/pics/6river.png" id="7_dl3qk"]
-[ext_resource type="Texture2D" uid="uid://c6cifamrdog3p" path="res://images/pics/7bridge.png" id="8_7sgl6"]
-[ext_resource type="Texture2D" uid="uid://dexac2bpe0l2i" path="res://images/pics/8factory.png" id="9_142sb"]
-[ext_resource type="Texture2D" uid="uid://be1vj1t50gc5a" path="res://images/pics/9trees.png" id="10_i8a80"]
-[ext_resource type="Texture2D" uid="uid://m4ia7jjje50n" path="res://images/pics/10disk1.png" id="11_nyygn"]
-[ext_resource type="Texture2D" uid="uid://datqjsp4efe47" path="res://images/pics/11disk.png" id="12_uy4op"]
-[ext_resource type="Texture2D" uid="uid://dfwb2iaag2n4y" path="res://images/pics/12cat.png" id="13_gxqow"]
-[ext_resource type="Texture2D" uid="uid://bwehx5wsv4cod" path="res://images/pics/13disk2.png" id="14_rh32x"]
-[ext_resource type="Texture2D" uid="uid://cdtnhl47skjvp" path="res://images/pics/14disk3.png" id="15_b05qc"]
-[ext_resource type="Texture2D" uid="uid://nyrk1bld7qsm" path="res://images/pics/15logo.png" id="16_x4lrx"]
+[ext_resource type="Texture2D" uid="uid://dwgs6nswodga1" path="res://images/pics/river.png" id="7_dl3qk"]
+[ext_resource type="Texture2D" uid="uid://c6cifamrdog3p" path="res://images/pics/bridge.png" id="8_7sgl6"]
+[ext_resource type="Texture2D" uid="uid://dexac2bpe0l2i" path="res://images/pics/factory.png" id="9_142sb"]
+[ext_resource type="Texture2D" uid="uid://be1vj1t50gc5a" path="res://images/pics/trees.png" id="10_i8a80"]
+[ext_resource type="Texture2D" uid="uid://dsn7jl7ojy31a" path="res://images/pics/ufo behind cat.png" id="11_tdxjp"]
+[ext_resource type="Texture2D" uid="uid://dfwb2iaag2n4y" path="res://images/pics/cat.png" id="13_gxqow"]
+[ext_resource type="Texture2D" uid="uid://dttr6u4iexsct" path="res://images/pics/ufo far.png" id="13_tk7yd"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="16_vbcux"]
+[ext_resource type="Texture2D" uid="uid://nyrk1bld7qsm" path="res://images/pics/logo.png" id="16_x4lrx"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="17_muyr4"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="18_3om0s"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="19_471ri"]
+[ext_resource type="Texture2D" uid="uid://ceku7m74m2fce" path="res://images/scene_pics/cva.png" id="20_nbyt1"]
 
-[node name="TestScene" type="Node2D" node_paths=PackedStringArray("pic_tree", "layer_tree", "ui")]
+[node name="TestScene" type="Node2D" node_paths=PackedStringArray("pic_tree", "layer_tree", "ui", "state_chart", "cva_ref", "done_button", "see_button", "layer_chart", "clip_panel")]
 script = ExtResource("1_wfom0")
 pic_tree = NodePath("PicLayers")
 layer_tree = NodePath("UI/MarginContainer/VBoxContainer/HBoxContainer/Layers")
 ui = NodePath("UI")
+state_chart = NodePath("StateChart")
+cva_ref = NodePath("cva")
+done_button = NodePath("UI/Button")
+see_button = NodePath("UI/Button2")
+layer_chart = NodePath("UI/MarginContainer")
+clip_panel = NodePath("UI/ClipPanels")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -30,11 +39,11 @@ ui = NodePath("UI")
 position = Vector2(-74, 0)
 scale = Vector2(2, 2)
 
-[node name="1" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("2_h4yp4")
-
 [node name="2" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("3_7wh8m")
+
+[node name="1" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("2_h4yp4")
 
 [node name="3" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("4_kx44s")
@@ -43,13 +52,13 @@ texture = ExtResource("4_kx44s")
 texture = ExtResource("5_juxxr")
 
 [node name="5" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("6_67bsw")
-
-[node name="6" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("7_dl3qk")
 
-[node name="7" type="Sprite2D" parent="PicLayers"]
+[node name="6" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("8_7sgl6")
+
+[node name="7" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("6_67bsw")
 
 [node name="8" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("9_142sb")
@@ -58,21 +67,15 @@ texture = ExtResource("9_142sb")
 texture = ExtResource("10_i8a80")
 
 [node name="10" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("11_nyygn")
+texture = ExtResource("11_tdxjp")
 
 [node name="11" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("12_uy4op")
-
-[node name="12" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("13_gxqow")
 
+[node name="12" type="Sprite2D" parent="PicLayers"]
+texture = ExtResource("13_tk7yd")
+
 [node name="13" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("14_rh32x")
-
-[node name="14" type="Sprite2D" parent="PicLayers"]
-texture = ExtResource("15_b05qc")
-
-[node name="15" type="Sprite2D" parent="PicLayers"]
 texture = ExtResource("16_x4lrx")
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -219,22 +222,6 @@ bbcode_enabled = true
 text = "13"
 text_direction = 2
 
-[node name="RichTextLabel14" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(25, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-bbcode_enabled = true
-text = "14"
-text_direction = 2
-
-[node name="RichTextLabel15" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(25, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-bbcode_enabled = true
-text = "15"
-text_direction = 2
-
 [node name="Layers" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
@@ -302,20 +289,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
-[node name="14" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-script = ExtResource("7_7v7qi")
-
-[node name="15" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-script = ExtResource("7_7v7qi")
-
 [node name="4" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers"]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
@@ -344,6 +317,89 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("7_7v7qi")
 
+[node name="Button" type="Button" parent="UI"]
+offset_left = 458.0
+offset_top = 424.0
+offset_right = 512.0
+offset_bottom = 455.0
+text = "DONE"
+
+[node name="Button2" type="Button" parent="UI"]
+offset_left = 537.0
+offset_top = 410.0
+offset_right = 618.0
+offset_bottom = 441.0
+text = "Is That...?"
+
+[node name="ClipPanels" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI/ClipPanels"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -343.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="UI/ClipPanels"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 312.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StateChart" type="Node" parent="."]
+script = ExtResource("16_vbcux")
+
+[node name="States" type="Node" parent="StateChart"]
+script = ExtResource("17_muyr4")
+initial_state = NodePath("beginning")
+
+[node name="beginning" type="Node" parent="StateChart/States"]
+script = ExtResource("18_3om0s")
+
+[node name="play" type="Node" parent="StateChart/States/beginning"]
+script = ExtResource("19_471ri")
+to = NodePath("../../playing")
+event = &"play"
+delay_in_seconds = "0.0"
+
+[node name="playing" type="Node" parent="StateChart/States"]
+script = ExtResource("18_3om0s")
+
+[node name="play2" type="Node" parent="StateChart/States/playing"]
+script = ExtResource("19_471ri")
+to = NodePath("../../playing2")
+event = &"play2"
+delay_in_seconds = "0.0"
+
+[node name="playing2" type="Node" parent="StateChart/States"]
+script = ExtResource("18_3om0s")
+
+[node name="found" type="Node" parent="StateChart/States"]
+script = ExtResource("18_3om0s")
+
+[node name="saw help" type="Node" parent="StateChart/States"]
+script = ExtResource("19_471ri")
+to = NodePath("../found")
+event = &"saw help"
+delay_in_seconds = "0.0"
+
+[node name="cva" type="Sprite2D" parent="."]
+position = Vector2(482, 269)
+scale = Vector2(2, 2)
+texture = ExtResource("20_nbyt1")
+
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/5" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/5" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/6" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/6" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/7" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/7" method="_on_gui_input"]
@@ -353,9 +409,13 @@ script = ExtResource("7_7v7qi")
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/11" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/11" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/12" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/12" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/13" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/13" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/14" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/14" method="_on_gui_input"]
-[connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/15" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/15" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/4" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/4" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/3" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/3" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/2" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/2" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/1" to="UI/MarginContainer/VBoxContainer/HBoxContainer/Layers/1" method="_on_gui_input"]
+[connection signal="pressed" from="UI/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="state_entered" from="StateChart/States/beginning" to="." method="_on_beginning_state_entered"]
+[connection signal="state_entered" from="StateChart/States/playing" to="." method="_on_playing_state_entered"]
+[connection signal="state_entered" from="StateChart/States/playing2" to="." method="_on_playing_2_state_entered"]
+[connection signal="state_entered" from="StateChart/States/found" to="." method="_on_found_state_entered"]

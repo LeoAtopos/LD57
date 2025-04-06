@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://datqjsp4efe47"
-path="res://.godot/imported/11disk.png-05f901c0770a44c666041be116e848f6.ctex"
+uid="uid://dttr6u4iexsct"
+path="res://.godot/imported/ufo far.png-5ca83da1ddab597403510c2b10fd0303.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/11disk.png"
-dest_files=["res://.godot/imported/11disk.png-05f901c0770a44c666041be116e848f6.ctex"]
+source_file="res://images/pics/ufo far.png"
+dest_files=["res://.godot/imported/ufo far.png-5ca83da1ddab597403510c2b10fd0303.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be1vj1t50gc5a"
-path="res://.godot/imported/9trees.png-2316ddbf38a606351f04e11f47559601.ctex"
+uid="uid://bgp23pul7wuid"
+path="res://.godot/imported/bank grass.png-9aa5e8171cc246e21b2bf1247035d616.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pics/9trees.png"
-dest_files=["res://.godot/imported/9trees.png-2316ddbf38a606351f04e11f47559601.ctex"]
+source_file="res://images/pics/bank grass.png"
+dest_files=["res://.godot/imported/bank grass.png-9aa5e8171cc246e21b2bf1247035d616.ctex"]
 
 [params]
 

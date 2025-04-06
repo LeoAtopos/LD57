@@ -24,7 +24,7 @@ resources_spreadsheet_view/freeze_first_column=true
 [application]
 
 config/name="LD57"
-run/main_scene="res://main/test_scene.tscn"
+run/main_scene="res://main/entry_desk.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -36,7 +36,14 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={}
 directories/dtl_directory={
-"what line": "res://tests/what line.dtl"
+"Done_2_line": "res://dialogs/Done_2_line.dtl",
+"Done_sorting_line": "res://dialogs/Done_sorting_line.dtl",
+"begin_line": "res://dialogs/begin_line.dtl",
+"begine_line_2": "res://dialogs/begine_line_2.dtl",
+"easy_give_up_line": "res://dialogs/easy_give_up_line.dtl",
+"ending0": "res://dialogs/ending0.dtl",
+"entry_line": "res://dialogs/entry_line.dtl",
+"saw_help_line": "res://dialogs/saw_help_line.dtl"
 }
 
 [display]

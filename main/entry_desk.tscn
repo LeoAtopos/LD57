@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://cigt2v37vcmx3"]
+
+[ext_resource type="Texture2D" uid="uid://c8jdqopxw7o3e" path="res://images/scene_pics/the desk.png" id="1_cxssx"]
+[ext_resource type="Script" path="res://main/entry_desk.gd" id="1_la2s6"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="2_rcvx5"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="3_lj0bh"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="4_xw4pn"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="6_2fy7x"]
+[ext_resource type="Script" path="res://main/click_2_start.gd" id="6_jtyy3"]
+
+[node name="EntryDesk" type="Node2D" node_paths=PackedStringArray("state_chart", "openning_stuff")]
+script = ExtResource("1_la2s6")
+state_chart = NodePath("StateChart")
+openning_stuff = NodePath("OpenStuff")
+
+[node name="TheDesk" type="Sprite2D" parent="."]
+position = Vector2(2, 5)
+scale = Vector2(0.631944, 0.631944)
+texture = ExtResource("1_cxssx")
+
+[node name="OpenStuff" type="Node2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OpenStuff"]
+custom_minimum_size = Vector2(300, 200)
+offset_left = 176.0
+offset_top = -192.0
+offset_right = 476.0
+offset_bottom = 8.0
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "DEPTHS
+        [wave]HELP"
+
+[node name="click2start" type="RichTextLabel" parent="OpenStuff"]
+custom_minimum_size = Vector2(300, 200)
+offset_left = 285.0
+offset_top = 4.0
+offset_right = 585.0
+offset_bottom = 204.0
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "click to start"
+script = ExtResource("6_jtyy3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StateChart" type="Node" parent="."]
+script = ExtResource("2_rcvx5")
+
+[node name="CompoundState" type="Node" parent="StateChart"]
+script = ExtResource("3_lj0bh")
+initial_state = NodePath("openning")
+
+[node name="openning" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("4_xw4pn")
+
+[node name="start" type="Node" parent="StateChart/CompoundState/openning"]
+script = ExtResource("6_2fy7x")
+to = NodePath("../../monolog")
+event = &"start"
+delay_in_seconds = "0.0"
+
+[node name="monolog" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("4_xw4pn")
+
+[connection signal="state_processing" from="StateChart/CompoundState/openning" to="." method="_on_openning_state_processing"]
+[connection signal="state_entered" from="StateChart/CompoundState/monolog" to="." method="_on_monolog_state_entered"]
